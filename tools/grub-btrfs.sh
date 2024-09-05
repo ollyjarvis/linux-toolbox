@@ -42,5 +42,5 @@ else
 fi
 
 if ! [[ `systemctl | grep grub-btrfsd.service` ]]; then
-  read -p $'Do you want to start grub-btrfs daemon? [y/N] ' grubbtrfsdaemon && [[ $grubbtrfsdaemon == [yY] ]] && sudo systemctl enable grub-btrfsd && sudo systemctl start grub-btrfsd
+  read -p $'Do you want to start grub-btrfs daemon? [y/N] ' grubbtrfsdaemon && [[ $grubbtrfsdaemon == [yY] ]] && sudo pacman -S inotify-tools && sudo systemctl enable grub-btrfsd && sudo systemctl start grub-btrfsd
 fi

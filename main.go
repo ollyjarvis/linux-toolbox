@@ -96,7 +96,7 @@ func (m model) View() string {
 
 func main() {
 	items := []list.Item{
-		item("btrfs-progs"),
+		item("btrfs configuration"),
 		item("foo"),
 		item("bar"),
 		item("baz"),
